@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz Application | Home</title>
+</head>
+<body onload="showQuestion(0)">
+    <div class="container">
+        <div class="quiz-card">
+            <!-- <div class="quiz-content"> -->
+                <div class="card text-center">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h2 class="text-left">Quiz Application</h2>
+                      <div id="scoreArea" class="d-flex justify-content-between">
+                        <span class="alert alert-info font-weight-bold mr-2">Score: <span id="score">00</span></span>
+                        <span class="alert alert-info">Time Left <span class="badge badge-info p-2">10:00</span></span>
+                      </div>
+                    </div>
+                    <div class="card-body text-left">
+                      <h5 class="card-title" id="showQuestion"></h5>
+                      <small id="error"></small>
+                      <p class="card-text" onclick="activeClass(this)"></p>
+                      <p class="card-text" onclick="activeClass(this)"></p>
+                      <p class="card-text" onclick="activeClass(this)"></p>
+                      <p class="card-text" onclick="activeClass(this)"></p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <p class="mt-4"><span id="currentQuestion">1</span> out of <span id="totalQuestions">5</span></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button class="btn-grad pl-4 pr-4 d-block" id="nextButton" onclick="save(this)">Save</button>
+                            <button class="btn-grad pl-4 pr-4 d-none" id="nextButton" onclick="nextQuestion(this)">Next Question</button>
+                            <button class="btn-grad pl-4 pr-4 d-none" id="nextButton" onclick="finish(this)">Finish</button>
+                        </div>
+                    </div>
+                  </div>
+            <!-- </div> -->
+        </div>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</html>
